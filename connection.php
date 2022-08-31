@@ -2,9 +2,9 @@
 
 Class Connection{
  
-	private $server = "mysql:host=localhost;dbname=db_mars";
-	private $username = "root";
-	private $password = "";
+	private $server = "mysql:host=us-cdbr-east-06.cleardb.net;dbname=db_mars";
+	private $username = "bbc7383f40e78b";
+	private $password = "4fbff9bd";
 	private $options  = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,);
 	protected $conn;
  	
