@@ -6,12 +6,12 @@
 	$database = new Connection();
 	$db = $database->open();
 	try{
-		$id = $_POST['id'];
-		$firstname = $_POST['firstname'];
-		$lastname = $_POST['lastname'];
-		$address = $_POST['address'];
+		$id = $_POST['martian_id'];
+		$firstname = $_POST['first_name'];
+		$lastname = $_POST['last_name'];
+		$base = $_POST['base_id'];
 
-		$sql = "UPDATE members SET firstname = '$firstname', lastname = '$lastname', address = '$address' WHERE id = '$id'";
+		$sql = "UPDATE martian SET firstname = '$first_name', lastname = '$last_name', base_id = '$base' WHERE id = '$id'";
 		//if-else statement in executing our query
 		if($db->exec($sql)){
 			$output['message'] = 'Member updated successfully';
