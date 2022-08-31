@@ -16,14 +16,13 @@
 
   <body>
     <?php require_once 'navbar.php';?>
-	<div>
-	<img src="images/redplanet.jpg" class="img-fluid" alt="Red Planet">
-	</div>
+	<?php require_once 'hdrslide.php';?>
+	
     <div class="container">
-	<h1 class="page-header text-center">List of Martian with their corresponding Bases</h1>
+	<h1 class="page-header text-center"><b>List of Martian with their corresponding Bases</h1></b>
 	<div class="row">
 		<div class="col-sm-12 col-sm-offset-2">
-			<a href="#add" class="btn btn-primary" data-toggle="modal"><i class="fa-solid fa-user-plus"></i></span> Add Member</a>
+			<a href="#add" class="btn btn-primary" data-toggle="modal"><i class="fa-brands fa-reddit-alien"></i></span> Add Martian</a>
       <font-awesome-icon icon="fa-solid fa-circle-plus" />
             <div id="alert" class="alert alert-info text-center" style="margin-top:20px; display:none;">
             	<button class="close"><span aria-hidden="true">&times;</span></button>
