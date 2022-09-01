@@ -26,10 +26,10 @@
       </ul>
     </div>
         <li class="nav-item">
-          <a class="nav-link" href="leader.php">Leaders</a>
+          <a class="nav-link active" href="leader.php">Leaders</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="about.php">About Us</a>
+          <a class="nav-link active" href="about.php">About Us</a>
         </li>
       </ul>
       <form class="d-flex">
