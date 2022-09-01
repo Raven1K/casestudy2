@@ -3,7 +3,7 @@ include('conn.php');
 ?>
 <!doctype html>
 <html lang="en">
-  <head>
+   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,15 +13,66 @@ include('conn.php');
 
     <!-- Fontawesome Icons-->
     <link rel="stylesheet" href="fonts/css/all.css">
-
+	
+	  <!-- Mobile Specific Metas
+  ================================================== -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="One page parallax responsive HTML Template">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+	
+  <!-- CSS
+  ================================================== -->
+  <!-- Themefisher Icon font -->
+	<link rel="stylesheet" href="plugins/themefisher-font/style.css">
+  <!-- bootstrap.min css -->
+	<link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <!-- Lightbox.min css -->
+	<link rel="stylesheet" href="plugins/lightbox2/css/lightbox.min.css">
+  <!-- animation css -->
+	<link rel="stylesheet" href="plugins/animate/animate.css">
+  <!-- Slick Carousel -->
+	<link rel="stylesheet" href="plugins/slick/slick.css">
+  <!-- Main Stylesheet -->
+	<link rel="stylesheet" href="assets/css/style2.css">
+	<link rel="stylesheet" href="assets/css/style.css">
     <title>Welcome to Red Planet</title>
-  </head>
+<style>	
+	.single-page-header {
+	background-image: url("images/redplanet3.jpg");
+	background-size: cover;
+	padding: 140px 0 70px;
+	text-align: center;
+	color: #fff;
+	position: relative;
+	}
+	.single-page-header:before {
+	background: rgba(0, 0, 0, 0.8);
+	position: absolute;
+	content: "";
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+</style>
+</head>
 
   <body>
 
     <?php require_once 'navbar.php';?>
-    <br>
-	
+    
+	<section class="single-page-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Martian Leaders</h2>
+				<ol class="breadcrumb header-bradcrumb justify-content-center">
+					<li class="breadcrumb-item"><a href="index.php" class="text-white">Home</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Leaders</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</section>
     <div class="container">
         <div class="row">
             <div class="col-md-12 mt-4">
