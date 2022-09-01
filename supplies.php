@@ -30,7 +30,6 @@
                         <table class="table table-bordered table-striped">
                             <thead class="">
                                 <tr>
-                                    <th>BASE ID</th>
                                     <th>BASE NAME</th>
                                     <th>Description</th>
                                     <th>Quantity</th>
@@ -39,7 +38,7 @@
                             <tbody>
                                 <?php
 
-                                    $query = "SELECT base.base_id, base.base_name, supply.name, supply.description, inventory.quantity
+                                    $query = "SELECT base.base_name, supply.name, supply.description, inventory.quantity
 				    		FROM inventory LEFT JOIN base ON inventory.base_id = base.base_id
 						LEFT JOIN supply ON inventory.supply_id = supply.supply_id";
                                     $statement = $conn->prepare($query);
@@ -52,8 +51,7 @@
                                         foreach($result as $row)
                                         {
                                             ?>
-                                            <tr>
-                                                <td><?= $row->base_id; ?></td>
+                                            <tr>                                                
                                                 <td><?= $row->base_name; ?></td>
                                                 <td><?= $row->description; ?></td>
                                                 <td><?= $row->quantity; ?></td>
