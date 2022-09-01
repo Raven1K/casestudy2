@@ -31,6 +31,7 @@
                             <thead class="">
                                 <tr>
                                     <th>BASE NAME</th>
+				    <th>SUPPLY NAME</th>	
                                     <th>Description</th>
                                     <th>Quantity</th>
                                 </tr>
@@ -54,7 +55,8 @@
                                             ?>
                                             <tr>                                                
                                                 <td><?= $row->base_name; ?></td>
-                                                <td><?= $row->description; ?></td>
+                                                <td><?= $row->name; ?></td>
+						<td><?= $row->description; ?></td>
                                                 <td><?= $row->quantity; ?></td>
                                             </tr>
                                             <?php
