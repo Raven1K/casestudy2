@@ -38,32 +38,3 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-
-
-<!-- Base Icons -->
-
-<div class="container-fluid bg-secondary text-center text-white">
-<br>
-  <div class="row">
-    <div class="col">
-    <h5>Tharsisland</h5>
-    <a href="#"><img src="images/mars_base1.jpg" class="shadow p-1 mb-5 bg-body" alt="Base 01" style="border-radius: 50%; width: 200px;"></a>
-    </div>
-    <div class="col">
-    <h5>Valles Marineris 2.0</h5>
-    <a href="#"><img src="images/mars_base2.jpg" class="shadow p-1 mb-5 bg-body" alt="Base 01" style="border-radius: 50%; width: 200px;"></a>
-    </div>
-    <div class="col">
-    <h5>Gale Cratertown</h5>
-    <a href="#"><img src="images/mars_base3.jpg" class="shadow p-1 mb-5 bg-body" alt="Base 01" style="border-radius: 50%; width: 200px;"></a>
-    </div>
-    <div class="col">
-    <h5>New New New York</h5>
-    <a href="#"><img src="images/mars_base4.jpg" class="shadow p-1 mb-5 bg-body" alt="Base 01" style="border-radius: 50%; width: 200px;"></a>
-    </div>
-    <div class="col">
-    <h5>Olympus Mons Spa & Casino</h5>
-    <a href="#"><img src="images/mars_base5.jpg" class="shadow p-1 mb-5 bg-body" alt="Base 01" style="border-radius: 50%; width: 200px;"></a>
-    </div>
-  </div>
-</div>
