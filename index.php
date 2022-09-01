@@ -15,8 +15,11 @@
   </head>
 
   <body>
-  <?php require_once 'navbar.php';?>
-	<?php require_once 'hdrslide.php';?>
+  <?php 
+  		require_once 'navbar.php';
+  		require_once 'hdrslide.php';
+  		require_once 'hdrbases.php';
+  ?>
 	
   <div class="container">
 	<h1 class="page-header text-center"><b>List of Martian with their corresponding Bases</h1></b>

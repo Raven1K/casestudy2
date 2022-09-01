@@ -18,7 +18,7 @@
 	    		<td><?php echo $row['last_name']; ?></td>
 	    		<td><?php echo $row['base_name']; ?></td>
 	    		<td class="text-center">
-	    			<button class="btn btn-warning btn-sm edit" data-id="<?php echo $row['martian_id']; ?>"><i class="fa-solid fa-pen-to-square"></i> Edit</button>
+	    			<button class="btn btn-warning btn-sm edit" data-id="<?php echo $row['martian_id']; ?>"><i class="fa-solid fa-pen-to-square"></i> Update</button>
 	    			<button class="btn btn-danger btn-sm delete" data-id="<?php echo $row['martian_id']; ?>"><i class="fa-solid fa-trash"></i> Delete</button>
 	    		</td>
 	    	</tr>
