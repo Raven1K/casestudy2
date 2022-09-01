@@ -88,9 +88,69 @@
             </div>
         </div>
     </div>
+    <br><br>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mt-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><b>Inventory of all supplies to determine what supply items are missing</b></h3><br>
+                        
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>SUPPLY ID</th>
+                                    <th>NAME</th>
+                                    <th>DESCRIPTION</th>
+                                    <th>QUANTITY</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                    $query = 'SELECT s.supply_id, s.name, s.description, i.quantity
+                                                FROM (SELECT * FROM inventory where base_id=5) as i
+                                                RIGHT JOIN supply as s
+                                                on s.supply_id = i.supply_id
+                                                ORDER BY s.supply_id';
+                                    $statement = $conn->prepare($query);
+                                    $statement->execute();
+
+                                    $statement->setFetchMode(PDO::FETCH_OBJ); //PDO::FETCH_ASSOC
+                                    $result = $statement->fetchAll();
+                                    if($result)
+                                    {
+                                        foreach($result as $row)
+                                        {
+                                            ?>
+                                            <tr>
+                                                <td><?= $row->supply_id; ?></td>
+                                                <td><?= $row->name; ?></td>
+                                                <td><?= $row->description; ?></td>
+                                                <td><?= $row->quantity; ?></td>
+                                            </tr>
+                                            <?php
+                                        }
+                                    }
+                                    else
+                                    {
+                                        ?>
+                                        <tr>
+                                            <td colspan="5">No Record Found</td>
+                                        </tr>
+                                        <?php
+                                    }
+                                ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <br><br><br>
-
-
 
 
 	<script src="js/jquery.min.js"></script>
