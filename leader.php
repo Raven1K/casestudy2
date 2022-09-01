@@ -15,7 +15,7 @@
   </head>
 
   <body>
-    <?php	include_once('connection.php'); ?>
+    <?php include_once('connection.php'); ?>
     <?php require_once 'navbar.php';?>
     <br>
 	
