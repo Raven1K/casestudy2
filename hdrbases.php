@@ -19,22 +19,22 @@ include('conn.php');
     </div>
     <div class="col">
     <h5>Valles Marineris 2.0</h5>
-    <a href="valles.php"><img src="images/mars_base2.jpg" class="shadow p-1 mb-1 bg-body" alt="Base 01" style="border-radius: 50%; width: 70%;"></a>
+    <a href="valles.php"><img src="images/mars_base2.jpg" class="shadow p-1 mb-1 bg-body" alt="Base 02" style="border-radius: 50%; width: 70%;"></a>
     <p>Number of Members: <?php echo $count2; ?></p>
     </div>
     <div class="col">
     <h5>Gale Cratertown</h5>
-    <a href="gale.php"><img src="images/mars_base3.jpg" class="shadow p-1 mb-1 bg-body" alt="Base 01" style="border-radius: 50%; width: 70%;"></a>
+    <a href="gale.php"><img src="images/mars_base3.jpg" class="shadow p-1 mb-1 bg-body" alt="Base 03" style="border-radius: 50%; width: 70%;"></a>
     <p>Number of Members: <?php echo $count3; ?></p>
     </div>
     <div class="col">
     <h5>New New New York</h5>
-    <a href="nnnyork.php"><img src="images/mars_base4.jpg" class="shadow p-1 mb-1 bg-body" alt="Base 01" style="border-radius: 50%; width: 70%;"></a>
+    <a href="nnnyork.php"><img src="images/mars_base4.jpg" class="shadow p-1 mb-1 bg-body" alt="Base 04" style="border-radius: 50%; width: 70%;"></a>
     <p>Number of Members: <?php echo $count4; ?></p>
     </div>
     <div class="col">
     <h5>Olympus Mons Spa & Casino</h5>
-    <a href="olumpus."><img src="images/mars_base5.jpg" class="shadow p-1 mb-1 bg-body" alt="Base 01" style="border-radius: 50%; width: 70%;"></a>
+    <a href="olympus.php"><img src="images/mars_base5.jpg" class="shadow p-1 mb-1 bg-body" alt="Base 05" style="border-radius: 50%; width: 70%;"></a>
     <p>Number of Members: <?php echo $count5; ?></p>
     </div>
   </div>
