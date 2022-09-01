@@ -1,7 +1,3 @@
-<?php
-require_once 'connection.php';
-session_start();
-?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -19,6 +15,7 @@ session_start();
   </head>
 
   <body>
+    <?php	include_once('connection.php'); ?>
     <?php require_once 'navbar.php';?>
     <br>
 	
