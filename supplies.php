@@ -30,10 +30,10 @@
                         <table class="table table-bordered table-striped">
                             <thead class="">
                                 <tr>
-                                    <th>BASE NAME</th>
+                                    <th>SUPPLY ID</th>
 				    <th>SUPPLY NAME</th>	
-                                    <th>Description</th>
-                                    <th>Quantity</th>
+                                    <th>DESCRIPTION</th>
+                                    <th>QUANTITY</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -54,7 +54,7 @@
                                         {
                                             ?>
                                             <tr>                                                
-                                                <td><?= $row->base_name; ?></td>
+                                                <td><?= $row->supply_id; ?></td>
                                                 <td><?= $row->name; ?></td>
 						<td><?= $row->description; ?></td>
                                                 <td><?= $row->quantity; ?></td>
