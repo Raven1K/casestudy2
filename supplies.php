@@ -40,7 +40,7 @@
                                 <?php
 
                                     $query = "SELECT supply.supply_id, supply.name, supply.description, inventory.quantity
-				    		FROM ("SELECT * FROM inventory WHERE base_id = 2";) 
+				    		FROM (SELECT * FROM `inventory` WHERE `base_id` = 2) 
 						RIGHT JOIN supply ON supply.supply_id = inventory.supply_id
 						ORDER BY supply.supply_id";
                                     $statement = $conn->prepare($query);
