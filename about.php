@@ -35,7 +35,7 @@
     <title>Welcome to Red Planet</title>
 <style>	
 	.single-page-header {
-	background-image: url("images/header.jpg");
+	background-image: url("images/redplanet2.jpg");
 	background-size: cover;
 	padding: 140px 0 70px;
 	text-align: center;
