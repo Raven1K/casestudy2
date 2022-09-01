@@ -29,9 +29,6 @@
           <a class="nav-link active" href="super.php">Martian Leaders</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="supplies.php">Planet Supply</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link active" href="about.php">About Us</a>
         </li>
       </ul>
