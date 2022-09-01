@@ -24,7 +24,7 @@
             <div class="col-md-12 mt-4">
                 <div class="card">
                     <div class="card-header">
-                        <h3>List of Martian Base with their corresponding Martian Leaders</h3>
+                        <h3>List of Supplies Available in each Bases with their Corresponding Quantity</h3>
                     </div>
                     <div class="card-body">
                         <table class="table table-bordered table-striped">
@@ -32,16 +32,16 @@
                                 <tr>
                                     <th>BASE ID</th>
                                     <th>BASE NAME</th>
-                                    <th>FOUNDED</th>
-                                    <th>MARTIAN LEADER</th>
+                                    <th>Description</th>
+                                    <th>Quantity</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
 
-                                    $query = "SELECT base.*, CONCAT (martian.first_name,' ', martian.last_name) AS super FROM base
-        														LEFT JOIN martian ON martian.base_id = base.base_id
-        														WHERE martian.super_id IS null";
+                                    $query = "SELECT base.base_name, supply.name, supply.description, inventory.quantity
+				    		FROM inventory LEFT JOIN base ON inventory.base_id = base.base_id
+						LEFT JOIN supply ON inventory.supply_id = supply.supply_id";
                                     $statement = $conn->prepare($query);
                                     $statement->execute();
 
@@ -55,8 +55,8 @@
                                             <tr>
                                                 <td><?= $row->base_id; ?></td>
                                                 <td><?= $row->base_name; ?></td>
-                                                <td><?= $row->founded; ?></td>
-                                                <td><?= $row->super; ?></td>
+                                                <td><?= $row->description; ?></td>
+                                                <td><?= $row->quantity; ?></td>
                                             </tr>
                                             <?php
                                         }
