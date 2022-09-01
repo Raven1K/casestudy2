@@ -39,8 +39,9 @@
                                 <?php
 
                                     $query = "SELECT base.base_name, supply.name, supply.description, inventory.quantity
-				    		FROM inventory LEFT JOIN base ON inventory.base_id = base.base_id
-						LEFT JOIN supply ON inventory.supply_id = supply.supply_id";
+				    		FROM (SELECT * FROM inventory LEFT JOIN base WHERE inventory.base_id = base.base_id) 
+						RIGHT JOIN supply ON supply.supply_id = inventory.supply_id
+						ORDER BY supply.supply_id";
                                     $statement = $conn->prepare($query);
                                     $statement->execute();
 
