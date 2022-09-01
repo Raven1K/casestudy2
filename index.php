@@ -15,7 +15,7 @@
   </head>
 
   <body>
-    <?php require_once 'navbar.php';?>
+  <?php require_once 'navbar.php';?>
 	<?php require_once 'hdrslide.php';?>
 	
     <div class="container">

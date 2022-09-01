@@ -1,5 +1,5 @@
 <?php
-require_once "connection.php";
+require_once 'connection.php';
 session_start();
 ?>
 <!doctype html>
@@ -20,7 +20,7 @@ session_start();
 
   <body>
     <?php require_once 'navbar.php';?>
-	<?php require_once 'hdrslide.php';?>
+    <br>
 	
     <div class="container">
 	<h1 class="page-header text-center"><b>List of Martian Base with their corresponding Martian Leaders</h1></b>
