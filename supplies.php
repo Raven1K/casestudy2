@@ -39,7 +39,7 @@
                             <tbody>
                                 <?php
 
-                                    $query = "SELECT base.base_name, supply.name, supply.description, inventory.quantity
+                                    $query = "SELECT base.base_id, base.base_name, supply.name, supply.description, inventory.quantity
 				    		FROM inventory LEFT JOIN base ON inventory.base_id = base.base_id
 						LEFT JOIN supply ON inventory.supply_id = supply.supply_id";
                                     $statement = $conn->prepare($query);
