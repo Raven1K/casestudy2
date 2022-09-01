@@ -19,8 +19,8 @@
             <li><a class="dropdown-item" href="thars.php">Tharsisland</a></li>
             <li><a class="dropdown-item" href="valles.php">Valles Marineris 2.0</a></li>
             <li><a class="dropdown-item" href="gale.php">Gale Cratertown</a></li>
-            <li><a class="dropdown-item" href="nnnyork,php">New New New York</a></li>
-            <li><a class="dropdown-item" href="olympus">Olympus Mons Spa & Casino</a></li>
+            <li><a class="dropdown-item" href="nnnyork.php">New New New York</a></li>
+            <li><a class="dropdown-item" href="olympus.php">Olympus Mons Spa & Casino</a></li>
           </ul>
         </li>
       </ul>
