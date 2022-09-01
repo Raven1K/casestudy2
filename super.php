@@ -1,3 +1,6 @@
+<?php 
+include('conn.php');
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -15,60 +18,72 @@
   </head>
 
   <body>
+
     <?php require_once 'navbar.php';?>
     <br>
 	
     <div class="container">
-	<h1 class="page-header text-center"><b>List of Martian Base with their corresponding Martian Leaders</h1></b>
-	<div class="row">
-	<table class='mt-3 table table-bordered table-striped' style='margin-top:20px;'>
+        <div class="row">
+            <div class="col-md-12 mt-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>List of Martian Base with their corresponding Martian Leaders</h3>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-bordered table-striped">
+                            <thead class="">
+                                <tr>
+                                    <th>BASE ID</th>
+                                    <th>BASE NAME</th>
+                                    <th>FOUNDED</th>
+                                    <th>MARTIAN LEADER</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
 
-			<thead>
-			<th>BASE ID</th>
-			<th>BASE NAME</th>
-			<th>BASE FOUNDED</th>
-			<th>MARTIAN LEADER</th>
-			</thead>
-    <?php
-	include_once('connection.php');
+                                    $query = "SELECT base.*, CONCAT (martian.first_name,' ', martian.last_name) AS super FROM base
+        														LEFT JOIN martian ON martian.base_id = base.base_id
+        														WHERE martian.super_id IS null";
+                                    $statement = $conn->prepare($query);
+                                    $statement->execute();
 
-	$database = new Connection();
-	$db = $database->open();
+                                    $statement->setFetchMode(PDO::FETCH_OBJ); //PDO::FETCH_ASSOC
+                                    $result = $statement->fetchAll();
+                                    if($result)
+                                    {
+                                        foreach($result as $row)
+                                        {
+                                            ?>
+                                            <tr>
+                                                <td><?= $row->base_id; ?></td>
+                                                <td><?= $row->base_name; ?></td>
+                                                <td><?= $row->founded; ?></td>
+                                                <td><?= $row->super; ?></td>
+                                            </tr>
+                                            <?php
+                                        }
+                                    }
+                                    else
+                                    {
+                                        ?>
+                                        <tr>
+                                            <td colspan="5">No Record Found</td>
+                                        </tr>
+                                        <?php
+                                    }
+                                ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-	try{	
 
-        $stmt = $conn->query("SELECT base.*, CONCAT (martian.first_name,' ', martian.last_name) AS super FROM base
-        LEFT JOIN martian ON martian.base_id = base.base_id
-        WHERE martian.super_id IS null");
 
-	    foreach ($db->query($stmt) as $row) {
-	    	?>
-	    	<tr>
-	    		<td><?php echo $row['base_id']; ?></td>
-	    		<td><?php echo $row['base_name']; ?></td>
-	    		<td><?php echo $row['founded']; ?></td>
-	    		<td><?php echo $row['super']; ?></td>
-	    		</td>
-	    	</tr>
-	    	<?php 
-	    }
-	}
-	catch(PDOException $e){
-		echo "There is some problem in connection: " . $e->getMessage();
-	}
 
-	//close connection
-	$database->close();
-	
-?>
-
-</table>
-		</div>
-	</div>
-</div>
-
-	<!-- Modals -->
-	<?php include('modal.html'); ?>
 	<script src="js/jquery.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 

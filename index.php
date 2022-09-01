@@ -18,7 +18,7 @@
   <?php require_once 'navbar.php';?>
 	<?php require_once 'hdrslide.php';?>
 	
-    <div class="container">
+  <div class="container">
 	<h1 class="page-header text-center"><b>List of Martian with their corresponding Bases</h1></b>
 	<div class="row">
 		<div class="col-sm-12 col-sm-offset-2">
