@@ -59,7 +59,7 @@ include('conn.php');
   <body>
 
     <?php require_once 'navbar.php';?>
-    <br>
+    
 	<section class="single-page-header">
 	<div class="container">
 		<div class="row">
