@@ -37,7 +37,7 @@
 
 	try{	
 
-        $stmt = $pdo->query("SELECT base.*, CONCAT (martian.first_name,' ', martian.last_name) AS super FROM base
+        $stmt = $conn->query("SELECT base.*, CONCAT (martian.first_name,' ', martian.last_name) AS super FROM base
         LEFT JOIN martian ON martian.base_id = base.base_id
         WHERE martian.super_id IS null");
 
@@ -71,7 +71,6 @@
 	<?php include('modal.html'); ?>
 	<script src="js/jquery.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
-	<script src="js/app.js"></script>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
