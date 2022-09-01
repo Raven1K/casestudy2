@@ -7,7 +7,7 @@
 	$db = $database->open();
 
 	try{
-		$id = $_POST['id'];
+		$id = $_POST['martian_id'];
 		$stmt = $db->prepare("SELECT * FROM martian WHERE martian_id = :id");
 		$stmt->bindParam(':id', $id);
 		$stmt->execute();
@@ -23,4 +23,4 @@
 
 	echo json_encode($output);
 
-?>
+?>a

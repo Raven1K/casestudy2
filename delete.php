@@ -6,7 +6,7 @@
 	$database = new Connection();
 	$db = $database->open();
 	try{
-		$sql = "DELETE FROM members WHERE id = '".$_POST['id']."'";
+		$sql = "DELETE FROM martian WHERE martian_id = '".$_POST['martian_id']."'";
 		//if-else statement in executing our query
 		if($db->exec($sql)){
 			$output['message'] = 'Member deleted successfully';

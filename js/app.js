@@ -122,10 +122,10 @@ function getDetails(id){
 				$('#alert_message').html(response.message);
 			}
 			else{
-				$('.id').val(response.data.id);
-				$('.firstname').val(response.data.firstname);
-				$('.lastname').val(response.data.lastname);
-				$('.address').val(response.data.address);
+				$('.martian_id').val(response.data.id);
+				$('.first_name').val(response.data.firstname);
+				$('.last_name').val(response.data.lastname);
+				$('.base_name').val(response.data.address);
 				$('.fullname').html(response.data.firstname + ' ' + response.data.lastname);
 			}
 		}

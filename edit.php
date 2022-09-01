@@ -9,16 +9,16 @@
 		$id = $_POST['martian_id'];
 		$firstname = $_POST['first_name'];
 		$lastname = $_POST['last_name'];
-		$base = $_POST['base_id'];
+		$address = $_POST['base_name'];
 
-		$sql = "UPDATE martian SET firstname = '$first_name', lastname = '$last_name', base_id = '$base' WHERE id = '$id'";
+		$sql = "UPDATE martian SET first_name = '$firstname', last_name = '$lastname', base_name = '$base' WHERE martian_id = '$id'";
 		//if-else statement in executing our query
 		if($db->exec($sql)){
-			$output['message'] = 'Member updated successfully';
+			$output['message'] = 'Martian updated successfully';
 		} 
 		else{
 			$output['error'] = true;
-			$output['message'] = 'Something went wrong. Cannot update member';
+			$output['message'] = 'Something went wrong. Cannot update Martian';
 		}
 
 	}
