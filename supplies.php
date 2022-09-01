@@ -30,19 +30,19 @@
                         <table class="table table-bordered table-striped">
                             <thead class="">
                                 <tr>
-                                    <th>SUPPLY ID</th>
+                                    <th>BASE NAME</th>
 				    <th>SUPPLY NAME</th>	
                                     <th>DESCRIPTION</th>
                                     <th>QUANTITY</th>
+				    <th>QUANTITY</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
 
-                                    $query = "SELECT supply.supply_id, supply.name, supply.description, inventory.quantity
-				    		FROM (SELECT * FROM inventory WHERE base_id = 2)
-						RIGHT JOIN supply ON supply.supply_id = inventory.supply_id
-						ORDER BY supply.supply_id";
+                                    $query = "SELECT base.*, supply.*, COALESCE ((SELECT quantity FROM inventory
+				    		WHERE base_id = base.base_id and supply_id = supply.supply_id), 0) AS quantity
+						FROM base CROSS JOIN supply ORDER BY base_id";
                                     $statement = $conn->prepare($query);
                                     $statement->execute();
 
@@ -54,10 +54,11 @@
                                         {
                                             ?>
                                             <tr>                                                
-                                                <td><?= $row->supply_id; ?></td>
+                                                <td><?= $row->base_name; ?></td>
                                                 <td><?= $row->name; ?></td>
 						<td><?= $row->description; ?></td>
                                                 <td><?= $row->quantity; ?></td>
+						<td><?= $row->quantity; ?></td>
                                             </tr>
                                             <?php
                                         }
