@@ -26,7 +26,7 @@
       </ul>
     </div>
         <li class="nav-item">
-          <a class="nav-link active" href="leader.php">Leaders</a>
+          <a class="nav-link active" href="super.php">Leaders</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="about.php">About Us</a>
