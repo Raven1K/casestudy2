@@ -10,46 +10,6 @@
 
     <!-- Fontawesome Icons-->
     <link rel="stylesheet" href="fonts/css/all.css">
-	  <!-- Mobile Specific Metas
-  ================================================== -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="One page parallax responsive HTML Template">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-	
-  <!-- CSS
-  ================================================== -->
-  <!-- Themefisher Icon font -->
-	<link rel="stylesheet" href="plugins/themefisher-font/style.css">
-  <!-- bootstrap.min css -->
-	<link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
-  <!-- Lightbox.min css -->
-	<link rel="stylesheet" href="plugins/lightbox2/css/lightbox.min.css">
-  <!-- animation css -->
-	<link rel="stylesheet" href="plugins/animate/animate.css">
-  <!-- Slick Carousel -->
-	<link rel="stylesheet" href="plugins/slick/slick.css">
-  <!-- Main Stylesheet -->
-	<link rel="stylesheet" href="assets/css/style2.css">
-	<link rel="stylesheet" href="assets/css/style.css">
-    <title>Welcome to Red Planet</title>
-<style>	
-	.single-page-header {
-	background-image: url("images/redplanet3.jpg");
-	background-size: cover;
-	padding: 140px 0 70px;
-	text-align: center;
-	color: #fff;
-	position: relative;
-	}
-	.single-page-header:before {
-	background: rgba(0, 0, 0, 0.8);
-	position: absolute;
-	content: "";
-	top: 0;
-	right: 0;
-	left: 0;
-	bottom: 0;
-</style>
 
     <title>Welcome to Red Planet</title>
   </head>
@@ -57,6 +17,7 @@
   <body>
   <?php 
   		require_once 'navbar.php';
+  		require_once 'hdrbases.php';
   ?>
     <div class="container">
         <div class="row">
