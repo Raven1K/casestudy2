@@ -21,15 +21,14 @@
     <div class="container">
 	<h1 class="page-header text-center"><b>List of Martian Base with their corresponding Martian Leaders</h1></b>
 	<div class="row">
-		<div class="col-sm-12 col-sm-offset-2">
-		
-      <font-awesome-icon icon="fa-solid fa-circle-plus" />
-            <div id="alert" class="alert alert-info text-center" style="margin-top:20px; display:none;">
-            	<button class="close"><span aria-hidden="true">&times;</span></button>
-                <span id="alert_message"></span>
-            </div> 
-    
-    
+	<table class='mt-3 table table-bordered table-striped' style='margin-top:20px;'>
+
+			<thead>
+			<th>BASE ID</th>
+			<th>BASE NAME</th>
+			<th>BASE FOUNDED</th>
+			<th>MARTIAN LEADER</th>
+			</thead>
     <?php
 	include_once('connection.php');
 
@@ -41,15 +40,6 @@
         $stmt = $pdo->query("SELECT base.*, CONCAT (martian.first_name,' ', martian.last_name) AS super FROM base
         LEFT JOIN martian ON martian.base_id = base.base_id
         WHERE martian.super_id IS null");
-
-        echo "<table class='mt-3 table table-bordered table-striped' style='margin-top:20px;'>
-
-			<thead>
-			<th>BASE ID</th>
-			<th>BASE NAME</th>
-			<th>BASE FOUNDED</th>
-			<th>MARTIAN LEADER</th>
-			</thead>";
 
 	    foreach ($db->query($stmt) as $row) {
 	    	?>
